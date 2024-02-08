@@ -24,6 +24,7 @@
 1707179775 c:\users\jakea\onedrive\desktop\178games\lesson02\include\gllight.h
 	<GLScene.h>
 
-1707177989 source:c:\users\jakea\onedrive\desktop\178games\lesson02\src\glscene.cpp
+1707180119 source:c:\users\jakea\onedrive\desktop\178games\lesson02\src\glscene.cpp
 	"GLScene.h"
+	"GLLight.h"
 
