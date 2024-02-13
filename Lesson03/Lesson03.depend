@@ -39,3 +39,35 @@
 
 1707181592 c:\users\jakea\onedrive\desktop\178games\common\include\soil.h
 
+1707178092 source:c:\users\zero\desktop\178games\lesson03\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1706746708 c:\users\zero\desktop\178games\lesson03\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1707350675 source:c:\users\zero\desktop\178games\lesson03\src\gllight.cpp
+	"GLLight.h"
+
+1707179775 c:\users\zero\desktop\178games\lesson03\include\gllight.h
+	<GLScene.h>
+
+1707354185 source:c:\users\zero\desktop\178games\lesson03\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+	<GLTexture.h>
+
+1707353579 c:\users\zero\desktop\178games\lesson03\include\gltexture.h
+	<SOIL.h>
+	<gl/gl.h>
+	<iostream>
+
+1707353492 source:c:\users\zero\desktop\178games\lesson03\src\gltexture.cpp
+	"GLTexture.h"
+
