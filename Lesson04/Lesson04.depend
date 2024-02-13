@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1707178092 source:c:\users\zero\desktop\178games\lesson04\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1706746708 c:\users\zero\desktop\178games\lesson04\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1706730588 c:\users\zero\desktop\178games\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1707350675 source:c:\users\zero\desktop\178games\lesson04\src\gllight.cpp
+	"GLLight.h"
+
+1707179775 c:\users\zero\desktop\178games\lesson04\include\gllight.h
+	<GLScene.h>
+
+1707783312 source:c:\users\zero\desktop\178games\lesson04\src\glmodel.cpp
+
+1707354185 source:c:\users\zero\desktop\178games\lesson04\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+	<GLTexture.h>
+
+1707353579 c:\users\zero\desktop\178games\lesson04\include\gltexture.h
+	<SOIL.h>
+	<gl/gl.h>
+	<iostream>
+
+1707181592 c:\users\zero\desktop\178games\common\include\soil.h
+
+1707353492 source:c:\users\zero\desktop\178games\lesson04\src\gltexture.cpp
+	"GLTexture.h"
+
