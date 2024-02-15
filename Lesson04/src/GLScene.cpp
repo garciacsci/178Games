@@ -1,8 +1,10 @@
 #include "GLScene.h"
 #include "GLLight.h"
 #include <GLTexture.h>
+#include "GLModel.h"
 
-GLTexture *teapotTex = new GLTexture();
+GLTexture *teapotTex = new GLTexture(); //texture object
+GLModel *teaPotModel = new GLModel();  // model object
 
 GLScene::GLScene()
 {
@@ -43,7 +45,7 @@ GLint GLScene::drawScene() // do not load objects in this function. It runs 30 t
 
     teapotTex->bindTexture(); //put texture on object
     glPushMatrix();         //group object
-        glutSolidTeapot(1.5); // load and render object
+        teaPotModel->drawModel();
     glPopMatrix();          // exit group
     return true;
 }

@@ -24,12 +24,14 @@
 1707179775 c:\users\zero\desktop\178games\lesson04\include\gllight.h
 	<GLScene.h>
 
-1707783312 source:c:\users\zero\desktop\178games\lesson04\src\glmodel.cpp
+1707785475 source:c:\users\zero\desktop\178games\lesson04\src\glmodel.cpp
+	"GLModel.h"
 
-1707354185 source:c:\users\zero\desktop\178games\lesson04\src\glscene.cpp
+1707785329 source:c:\users\zero\desktop\178games\lesson04\src\glscene.cpp
 	"GLScene.h"
 	"GLLight.h"
 	<GLTexture.h>
+	"GLModel.h"
 
 1707353579 c:\users\zero\desktop\178games\lesson04\include\gltexture.h
 	<SOIL.h>
@@ -40,4 +42,10 @@
 
 1707353492 source:c:\users\zero\desktop\178games\lesson04\src\gltexture.cpp
 	"GLTexture.h"
+
+1707785390 c:\users\zero\desktop\178games\lesson04\include\glmodel.h
+	<GL/GL.h>
+	<windows.h>
+	<iostream>
+	<GL/glut.h>
 
