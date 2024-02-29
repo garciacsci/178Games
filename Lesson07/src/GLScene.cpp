@@ -4,6 +4,7 @@
 #include<GLModel.h>
 #include<GLInputs.h>
 #include<GLParallax.h>
+#include <GLPlayer.h>
 
 GLTexture *teapotTex = new GLTexture();  // texture object
 GLModel *teaPotModel = new GLModel();    // model object
@@ -11,7 +12,8 @@ GLInputs *KbMs       = new GLInputs();   // keyboard and Mouse
 GLParallax *plx      = new GLParallax(); // parallax
 
 GLParallax *plx1      = new GLParallax(); // parallax
-
+//GLPlayer *pl           = new GLPLayer();
+GLPlayer *pl = new GLPlayer();
 
 GLScene::GLScene()
 {
@@ -44,6 +46,9 @@ GLint GLScene::initGL()
     teapotTex->loadTexture("images/teapot.jpg");//load texture
     plx->parallaxInit("images/p.png");
     plx1->parallaxInit("images/plx.png");
+    pl->initPlayer(5,2,"images/player.png");
+
+
     return true;
 }
 
@@ -65,11 +70,18 @@ GLint GLScene::drawScene()    // this function runs on a loop
      glEnable(GL_LIGHTING);
    glPopMatrix();
 
+   glPushMatrix();
+    glDisable(GL_LIGHTING);
+    pl->drawPlayer();
+    glEnable(GL_LIGHTING);
+
 
    teapotTex->bindTexture();   //activate texture handler
    glPushMatrix();             //group object
      teaPotModel->drawModel();   // draw model obj
    glPopMatrix();              // exit group
+
+   pl->drawPlayer();
 
    return true;
 }
