@@ -35,9 +35,13 @@ void GLPlayer::initPlayer(int x, int y, char* fileName)
     texture->loadTexture(fileName); // loading my player texture
 
     xMin = 0;
-    yMin = 0;
+    yMin = 1.0/(float)framesY;
     xMax = 1.0/(float)framesX;
-    yMax = 1.0/(float)framesY;
+    yMax = 1;
+
+    actionTrigger = 0;
+        myTime->startTime = clock();
+
 
 
 }
@@ -73,5 +77,37 @@ void GLPlayer::drawPlayer()
 
 void GLPlayer::actions()
 {
+    if(clock() - myTime->startTime>150)
+    {
+        switch(actionTrigger)
+        {
 
+        case STAND:
+            xMin = 0;
+            xMax = 1.0/(float)framesX;
+            break;
+
+        case WALK:
+            xMin += 1.0/(float)framesX;
+            xMax += 1.0/(float)framesX;
+            break;
+
+        case RUN:
+            // run
+
+        case JUMP:
+            // jump
+
+        case ATTACK:
+            // attack
+
+        default:
+           // default
+           break;
+
+
+        }
+
+        myTime->startTime =clock();
+    } // end of time
 }

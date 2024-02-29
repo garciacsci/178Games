@@ -135,21 +135,22 @@
 1708994668 source:c:\users\zero\desktop\178games\lesson07\src\glparallax.cpp
 	"GLParallax.h"
 
-1709167453 source:c:\users\zero\desktop\178games\lesson07\src\glplayer.cpp
+1709168736 source:c:\users\zero\desktop\178games\lesson07\src\glplayer.cpp
 	"GLPlayer.h"
 
-1709166699 c:\users\zero\desktop\178games\lesson07\include\glplayer.h
+1709168736 c:\users\zero\desktop\178games\lesson07\include\glplayer.h
 	<common.h>
 	<GLTexture.h>
 	<GLTimer.h>
 
-1708994668 source:c:\users\zero\desktop\178games\lesson07\src\glscene.cpp
+1709168900 source:c:\users\zero\desktop\178games\lesson07\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<GLTexture.h>
 	<GLModel.h>
 	<GLInputs.h>
 	<GLParallax.h>
+	<GLPlayer.h>
 
 1707353578 source:c:\users\zero\desktop\178games\lesson07\src\gltexture.cpp
 	"GLTexture.h"

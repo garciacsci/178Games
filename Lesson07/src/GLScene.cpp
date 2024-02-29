@@ -11,9 +11,8 @@ GLModel *teaPotModel = new GLModel();    // model object
 GLInputs *KbMs       = new GLInputs();   // keyboard and Mouse
 GLParallax *plx      = new GLParallax(); // parallax
 
-GLParallax *plx1      = new GLParallax(); // parallax
-//GLPlayer *pl           = new GLPLayer();
-GLPlayer *pl = new GLPlayer();
+GLParallax *plx1     = new GLParallax(); // parallax
+GLPlayer *pl         = new GLPlayer();
 
 GLScene::GLScene()
 {
@@ -47,7 +46,7 @@ GLint GLScene::initGL()
     plx->parallaxInit("images/p.png");
     plx1->parallaxInit("images/plx.png");
     pl->initPlayer(5,2,"images/player.png");
-
+    pl->actionTrigger= pl->WALK;
 
     return true;
 }
@@ -73,6 +72,7 @@ GLint GLScene::drawScene()    // this function runs on a loop
    glPushMatrix();
     glDisable(GL_LIGHTING);
     pl->drawPlayer();
+    pl->actions();
     glEnable(GL_LIGHTING);
 
 

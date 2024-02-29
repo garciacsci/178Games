@@ -11,6 +11,9 @@ class GLPlayer
         GLPlayer();
         virtual ~GLPlayer();
 
+
+        enum {STAND, WALK, RUN, JUMP, ATTACK};
+
         GLTexture *texture = new GLTexture();
         GLTimer   *myTime = new GLTimer();
 
@@ -24,6 +27,11 @@ class GLPlayer
         vec3 vert[4];
         float xMax,xMin,yMax,yMin;
         int framesX, framesY;
+
+        int actionTrigger;      // for load actions
+
+
+
 
     protected:
 
