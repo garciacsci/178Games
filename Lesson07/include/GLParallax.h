@@ -14,7 +14,7 @@ class GLParallax
         GLTimer   *myTime = new GLTimer();
         virtual ~GLParallax();
 
-        void parallaxInit(char *);// load background file
+        void parallaxInit(const char *);// load background file
         void parallaxScroll(bool,string,float); // auto, direction, speed
         void parallaxDraw(float, float); // width and height
 

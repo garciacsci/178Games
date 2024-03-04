@@ -88,7 +88,7 @@ void KillGLWindow()								// Properly Kill The Window
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //										THE CREATE GL WINDOW
 /////////////////////////////////////////////////////////////////////////////////////////////////
-BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscreenflag)
+BOOL CreateGLWindow(const char* title, int width, int height, int bits, bool fullscreenflag)
 {
 	GLuint		PixelFormat;			// Holds The Results After Searching For A Match
 	WNDCLASS	wc;						// Windows Class Structure
@@ -322,7 +322,7 @@ int WINAPI WinMain(	HINSTANCE	hInstance,			// Instance
     int	fullscreenHeight = GetSystemMetrics(SM_CYSCREEN);
 
 	// Ask The User Which Screen Mode They Prefer
-	if (MessageBox(NULL,"Would You Like To Run In Fullscreen Mode?", "Start FullScreen?",MB_YESNO|MB_ICONQUESTION)==IDNO)
+	if (MessageBox(NULL,"Would You Like To Run In Fullscreen Mode?", "Start FullScreen?", MB_YESNO | MB_ICONQUESTION) == IDNO)
 	{
 		fullscreen=FALSE;							// Windowed Mode
 	}

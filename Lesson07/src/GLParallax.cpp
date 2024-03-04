@@ -14,7 +14,7 @@ GLParallax::~GLParallax()
     //dtor
 }
 
-void GLParallax::parallaxInit(char* fileName)
+void GLParallax::parallaxInit(const char* fileName)
 {
 
     background->loadTexture(fileName); //loading my background

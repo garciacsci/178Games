@@ -9,7 +9,7 @@ GLTexture::~GLTexture()
 {
     //dtor
 }
-void GLTexture::loadTexture(char* fileName)
+void GLTexture::loadTexture(const char* fileName)
 {
     glGenTextures(1,&tex);               //generate image handler
     glBindTexture(GL_TEXTURE_2D,tex);    //pointing handler to the texture data format

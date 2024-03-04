@@ -12,7 +12,7 @@ class GLTexture
         GLuint tex;
         GLint width,height;
         unsigned char* image;
-        void loadTexture(char *);
+        void loadTexture(const char *);
         void bindTexture();
 
     protected:

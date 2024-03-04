@@ -18,7 +18,7 @@ GLPlayer::~GLPlayer()
     //dtor
 }
 
-void GLPlayer::initPlayer(int x, int y, char* fileName)
+void GLPlayer::initPlayer(int x, int y, const char* fileName)
 {
     plPosition.x = 0.0;         // initialize positions
     plPosition.y = 0.0;

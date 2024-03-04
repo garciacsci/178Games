@@ -17,7 +17,7 @@ class GLPlayer
         GLTexture *texture = new GLTexture();
         GLTimer   *myTime = new GLTimer();
 
-        void initPlayer(int, int, char* fileName); // number of x, y frames
+        void initPlayer(int, int, const char* fileName); // number of x, y frames
         void drawPlayer();
         void actions();
 
