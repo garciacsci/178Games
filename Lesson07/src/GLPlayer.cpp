@@ -35,9 +35,10 @@ void GLPlayer::initPlayer(int x, int y, const char* fileName)
     texture->loadTexture(fileName); // loading my player texture
 
     xMin = 0;
-    yMin = 1.0/(float)framesY;
-    xMax = 1.0/(float)framesX;
     yMax = 1;
+    xMax = 1.0/(float)framesX;
+    yMin = yMax-1.0/(float)framesY;
+    
 
     actionTrigger = 0;
         myTime->startTime = clock();
