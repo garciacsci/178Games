@@ -1,0 +1,180 @@
+# depslib dependency file v1.0
+1707787139 source:c:\users\manua\onedrive\desktop\178games\lesson07\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1708992263 c:\users\manua\onedrive\desktop\178games\lesson07\include\glscene.h
+	<common.h>
+
+1708995879 c:\users\manua\onedrive\desktop\178games\lesson07\include\common.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<SOIL.h>
+	<iostream>
+	<time.h>
+
+1706572515 c:\users\manua\onedrive\desktop\178games\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1707181593 c:\users\manua\onedrive\desktop\178games\common\include\soil.h
+
+1709078619 source:c:\users\manua\onedrive\desktop\178games\lesson07\src\glinputs.cpp
+	"GLInputs.h"
+
+1708993183 c:\users\manua\onedrive\desktop\178games\lesson07\include\glinputs.h
+	<GLModel.h>
+	<GLParallax.h>
+	<windows.h>
+
+1708019561 c:\users\manua\onedrive\desktop\178games\lesson07\include\glmodel.h
+	<windows.h>
+	<iostream>
+	<gl/gl.h>
+	<GL/glut.h>
+
+1708564706 c:\users\manua\onedrive\desktop\178games\lesson07\include\glparallax.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1708021248 c:\users\manua\onedrive\desktop\178games\lesson07\include\gltexture.h
+	<windows.h>
+	<GL/gl.h>
+	<SOIL.h>
+	<iostream>
+
+1708564748 c:\users\manua\onedrive\desktop\178games\lesson07\include\gltimer.h
+	<common.h>
+
+1707179564 source:c:\users\manua\onedrive\desktop\178games\lesson07\src\gllight.cpp
+	"GLLight.h"
+
+1707179815 c:\users\manua\onedrive\desktop\178games\lesson07\include\gllight.h
+	<GLScene.h>
+
+1709078447 source:c:\users\manua\onedrive\desktop\178games\lesson07\src\glmodel.cpp
+	"GLModel.h"
+
+1709079065 source:c:\users\manua\onedrive\desktop\178games\lesson07\src\glparallax.cpp
+	"GLParallax.h"
+
+1708994903 source:c:\users\manua\onedrive\desktop\178games\lesson07\src\glplayer.cpp
+	"GLPlayer.h"
+
+1708996256 c:\users\manua\onedrive\desktop\178games\lesson07\include\glplayer.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1708994669 source:c:\users\manua\onedrive\desktop\178games\lesson07\src\gltexture.cpp
+	"GLTexture.h"
+
+1708564272 source:c:\users\manua\onedrive\desktop\178games\lesson07\src\gltimer.cpp
+	"GLTimer.h"
+
+1709078176 source:c:\users\manua\onedrive\desktop\178games\lesson07\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<GLTexture.h>
+	<GLModel.h>
+	<GLInputs.h>
+	<GLParallax.h>
+
+1709079774 source:c:\users\joshu\onedrive\desktop\178games\lesson07\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1708992264 c:\users\joshu\onedrive\desktop\178games\lesson07\include\glscene.h
+	<common.h>
+
+1708995880 c:\users\joshu\onedrive\desktop\178games\lesson07\include\common.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glut.h>
+	<SOIL.h>
+	<iostream>
+	<time.h>
+
+1709078620 source:c:\users\joshu\onedrive\desktop\178games\lesson07\src\glinputs.cpp
+	"GLInputs.h"
+
+1708993184 c:\users\joshu\onedrive\desktop\178games\lesson07\include\glinputs.h
+	<GLModel.h>
+	<GLParallax.h>
+	<windows.h>
+
+1708019562 c:\users\joshu\onedrive\desktop\178games\lesson07\include\glmodel.h
+	<windows.h>
+	<iostream>
+	<gl/gl.h>
+	<GL/glut.h>
+
+1708564708 c:\users\joshu\onedrive\desktop\178games\lesson07\include\glparallax.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1708021250 c:\users\joshu\onedrive\desktop\178games\lesson07\include\gltexture.h
+	<windows.h>
+	<GL/gl.h>
+	<SOIL.h>
+	<iostream>
+
+1708564750 c:\users\joshu\onedrive\desktop\178games\lesson07\include\gltimer.h
+	<common.h>
+
+1707179566 source:c:\users\joshu\onedrive\desktop\178games\lesson07\src\gllight.cpp
+	"GLLight.h"
+
+1707179816 c:\users\joshu\onedrive\desktop\178games\lesson07\include\gllight.h
+	<GLScene.h>
+
+1709078448 source:c:\users\joshu\onedrive\desktop\178games\lesson07\src\glmodel.cpp
+	"GLModel.h"
+
+1709079066 source:c:\users\joshu\onedrive\desktop\178games\lesson07\src\glparallax.cpp
+	"GLParallax.h"
+
+1709167673 source:c:\users\joshu\onedrive\desktop\178games\lesson07\src\glplayer.cpp
+	"GLPlayer.h"
+
+1709168871 c:\users\joshu\onedrive\desktop\178games\lesson07\include\glplayer.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1709168871 source:c:\users\joshu\onedrive\desktop\178games\lesson07\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<GLTexture.h>
+	<GLModel.h>
+	<GLInputs.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+
+1708994670 source:c:\users\joshu\onedrive\desktop\178games\lesson07\src\gltexture.cpp
+	"GLTexture.h"
+
+1708564274 source:c:\users\joshu\onedrive\desktop\178games\lesson07\src\gltimer.cpp
+	"GLTimer.h"
+
+1706723025 c:\users\joshu\onedrive\desktop\178games\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1707181591 c:\users\joshu\onedrive\desktop\178games\common\include\soil.h
+
