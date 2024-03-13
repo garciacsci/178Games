@@ -1,0 +1,96 @@
+# depslib dependency file v1.0
+1707790742 source:c:\users\nishu\desktop\178games\lesson08\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\glscene.h
+	<common.h>
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\common.h
+	<windows.h>
+	<iostream>
+	<gl/gl.h>
+	<GL/glut.h>
+	<time.h>
+	<SOIL.h>
+
+1706577399 c:\users\nishu\desktop\178games\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1707185187 c:\users\nishu\desktop\178games\common\include\soil.h
+
+1710201428 source:c:\users\nishu\desktop\178games\lesson08\src\glenms.cpp
+	"GLEnms.h"
+
+1710201428 c:\users\nishu\desktop\178games\lesson08\include\glenms.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\gltexture.h
+	<common.h>
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\gltimer.h
+	<common.h>
+
+1710193085 source:c:\users\nishu\desktop\178games\lesson08\src\glinputs.cpp
+	"GLInputs.h"
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\glinputs.h
+	<GLModel.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+	<common.h>
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\glmodel.h
+	<common.h>
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\glparallax.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\glplayer.h
+	<common.h>
+	<GLTexture.h>
+	<GLTimer.h>
+
+1710193085 source:c:\users\nishu\desktop\178games\lesson08\src\gllight.cpp
+	"GLLight.h"
+
+1710193110 c:\users\nishu\desktop\178games\lesson08\include\gllight.h
+	<GLScene.h>
+
+1710193085 source:c:\users\nishu\desktop\178games\lesson08\src\glmodel.cpp
+	"GLModel.h"
+
+1710193085 source:c:\users\nishu\desktop\178games\lesson08\src\glparallax.cpp
+	"GLParallax.h"
+
+1710198738 source:c:\users\nishu\desktop\178games\lesson08\src\glplayer.cpp
+	"GLPlayer.h"
+
+1710193085 source:c:\users\nishu\desktop\178games\lesson08\src\gltexture.cpp
+	"GLTexture.h"
+
+1710193085 source:c:\users\nishu\desktop\178games\lesson08\src\gltimer.cpp
+	"GLTimer.h"
+
+1710202216 source:c:\users\nishu\desktop\178games\lesson08\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<GLTexture.h>
+	<GLModel.h>
+	<GLInputs.h>
+	<GLParallax.h>
+	<GLPlayer.h>
+	<GLEnms.h>
+	<GLTimer.h>
+
