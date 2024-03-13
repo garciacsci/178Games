@@ -3,6 +3,7 @@
 
 #include <common.h>
 
+
 class GLScene
 {
     public:
@@ -12,12 +13,12 @@ class GLScene
         GLint drawScene();
         GLvoid resizeScene(GLsizei, GLsizei);
 
-        int windMsg(HWND,UINT,WPARAM,LPARAM);   // take windows inputs
+        int windMsg(HWND,UINT,WPARAM,LPARAM);  // take windows inputs
 
-        WPARAM wParam;                          // keyboard/mouse msg
+        WPARAM wParam;                         // keyboard/Mouse msg
 
-        float screenWidth;                      // get values from main window
-        float screenHeight;                     // get Values from main window
+        float screenWidth;                     // get values from main window
+        float screenHeight;                    // get Values from main window
 
     protected:
 

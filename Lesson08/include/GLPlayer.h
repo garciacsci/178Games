@@ -1,9 +1,9 @@
 #ifndef GLPLAYER_H
 #define GLPLAYER_H
 
-#include <common.h>
-#include <GLTexture.h>
-#include <GLTimer.h>
+#include<common.h>
+#include<GLTexture.h>
+#include<GLTimer.h>
 
 class GLPlayer
 {
@@ -11,22 +11,23 @@ class GLPlayer
         GLPlayer();
         virtual ~GLPlayer();
 
-        enum {STAND, WALKLEFT, WALKRIGHT, RUN, JUMP, ATTACK};
+        enum {STAND, WALKLEFT,WALKRIGHT, RUN, JUMP, ATTACK};
 
         GLTexture *texture = new GLTexture();
-        GLTimer *myTime = new GLTimer();
+        GLTimer   *myTime = new GLTimer();
 
-        void initPlayer(int,int,char* fileName);   // number of x, y frames
+        void initPlayer(int,int,char* fileName); // number of x, y frames
         void drawPlayer();
         void actions();
 
         vec3 plPosition;
         vec3 plScale;
 
-        vec3 verts[4];              // four corners of player frame
+        vec3 vert[4];
         float xMax,xMin,yMax,yMin;
         int framesX,framesY;
-        int actionTrigger;      // for load actions
+
+        int actionTrigger;  // for load actions
 
     protected:
 

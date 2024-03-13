@@ -1,7 +1,7 @@
 #ifndef GLTIMER_H
 #define GLTIMER_H
 
-#include <common.h>
+#include<common.h>
 
 class GLTimer
 {

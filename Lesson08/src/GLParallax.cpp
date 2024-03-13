@@ -3,10 +3,9 @@
 GLParallax::GLParallax()
 {
     //ctor
-
-    xMax = 1.0;
-    xMin = 0.0;
-    yMax = 0.0;
+    xMax=1.0;
+    xMin=0.0;
+    yMax =0.0;
     yMin = 1.0;
 }
 
@@ -17,7 +16,8 @@ GLParallax::~GLParallax()
 
 void GLParallax::parallaxInit(char* fileName)
 {
-    background->loadTexture(fileName);  // loading my background
+
+    background->loadTexture(fileName); //loading my background
     myTime->startTime = clock();
 }
 
@@ -25,49 +25,51 @@ void GLParallax::parallaxScroll(bool Auto, string dir, float speed)
 {
     if(Auto)
     {
-        if(clock() - myTime-> startTime > 15)
+        if(clock() - myTime->startTime>15)
         {
-            if(dir=="up")
-            {
-                yMin-=speed;
-                yMax-=speed;
-            }
-            if(dir=="down")
-            {
-                yMin+=speed;
-                yMax+=speed;
-            }
-            if(dir=="left")
-            {
-                xMin-=speed;
-                xMax-=speed;
-            }
-            if(dir=="right")
-            {
-                xMin+=speed;
-                xMax+=speed;
-            }
-            myTime->startTime = clock();
+
+        if(dir=="up")
+        {
+           yMin -=speed;
+           yMax -=speed;
+        }
+        if(dir=="down")
+        {
+           yMin +=speed;
+           yMax +=speed;
+        }
+        if(dir=="left")
+        {
+           xMin -=speed;
+           xMax -=speed;
+        }
+        if(dir=="right")
+        {
+           xMin +=speed;
+           xMax +=speed;
+        }
+
+        myTime->startTime =clock();
         }
     }
 }
 
 void GLParallax::parallaxDraw(float width, float height)
 {
-    glColor3f(1.0,1.0,1.0);  // white rectangle
-    background->bindTexture();  // binding my background
+    glColor3f(1.0,1.0,1.0); //white rectangle
+    background->bindTexture();    //binding my background
     glBegin(GL_POLYGON);
         glTexCoord2f(xMin,yMin);
-        glVertex3f(-width/height,-1.0,-8.0);
+        glVertex3f(-width/height,-1,-8.0);
 
         glTexCoord2f(xMax,yMin);
-        glVertex3f( width/height,-1.0,-8.0);
+        glVertex3f( width/height,-1,-8.0);
 
         glTexCoord2f(xMax,yMax);
-        glVertex3f( width/height,1.0,-8.0);
+        glVertex3f( width/height,1,-8.0);
 
         glTexCoord2f(xMin,yMax);
-        glVertex3f(-width/height,1.0,-8.0);
+        glVertex3f(-width/height,1,-8.0);
     glEnd();
 
 }

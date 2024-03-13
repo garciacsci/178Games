@@ -1,4 +1,4 @@
-// TEXTURE
+
 #pragma once
 
 #ifdef _WIN32
@@ -78,7 +78,6 @@ void KillGLWindow()								// Properly Kill The Window
 	}
 }
 
-
 /*	This Code Creates Our OpenGL Window.  Parameters Are:					*
  *	title			- Title To Appear At The Top Of The Window				*
  *	width			- Width Of The GL Window Or Fullscreen Mode				*
@@ -133,7 +132,7 @@ BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscree
 
 		dwExStyle=WS_EX_APPWINDOW;								// Window Extended Style
 		dwStyle= WS_POPUP;			// must handle Gsync situations: Windows Style
-		ShowCursor(TRUE);									// Hide Mouse Pointer
+		ShowCursor(FALSE);									// Hide Mouse Pointer
 	}
 	else
 	{
@@ -223,7 +222,7 @@ BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscree
 	ShowWindow(hWnd,SW_SHOW);						// Show The Window
 	SetForegroundWindow(hWnd);						// Slightly Higher Priority
 	SetFocus(hWnd);									// Sets Keyboard Focus To The Window
-	scene->resizeScene(width,height);			    // Set Up Our Perspective GL Screen
+	scene->resizeScene(width,height);           	// Set Up Our Perspective GL Screen
 
 	if (!scene->initGL())							// Initialize Our Newly Created GL Window
 	{
@@ -231,7 +230,6 @@ BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscree
 		MessageBox(NULL,"Initialization Failed.","ERROR",MB_OK|MB_ICONEXCLAMATION);
 		return FALSE;								// Return FALSE
 	}
-
 	return TRUE;									// Success
 }
 
@@ -289,6 +287,7 @@ LRESULT CALLBACK WndProc(	HWND	hWnd,			// Handle For This Window
 		case WM_KEYUP:								// Has A Key Been Released?
 		{
 			keys[wParam] = FALSE;					// If So, Mark It As FALSE
+
 			return 0;								// Jump Back
 		}
 
@@ -296,6 +295,7 @@ LRESULT CALLBACK WndProc(	HWND	hWnd,			// Handle For This Window
 		{
                                                     // LoWord=Width, HiWord=Height
 			//Scene->ReSizeGLScene(GetSystemMetrics(SM_CXSCREEN),HIWORD(lParam));
+
 			scene->resizeScene(LOWORD(lParam),HIWORD(lParam));
 			return 0;								// Jump Back
 		}
@@ -328,7 +328,7 @@ int WINAPI WinMain(	HINSTANCE	hInstance,			// Instance
 	}
 
 	// Create Our OpenGL Window
-	if (!CreateGLWindow("Game Engine Lesson 02: Lighting",fullscreenWidth,fullscreenHeight,256,fullscreen))
+	if (!CreateGLWindow("Game Engine Lesson 01",fullscreenWidth,fullscreenHeight,256,fullscreen))
 	{
 		return 0;									// Quit If Window Was Not Created
 	}
@@ -350,22 +350,23 @@ int WINAPI WinMain(	HINSTANCE	hInstance,			// Instance
 		else										// If There Are No Messages
 		{
 			// Draw The Scene.  Watch For ESC Key And Quit Messages From DrawGLScene()
-			if (keys[VK_ESCAPE])	// Active?  Was There A Quit Received?
+			if ( keys[VK_ESCAPE])	// Active?  Was There A Quit Received?
 			{
 				done=TRUE;							// ESC or DrawGLScene Signalled A Quit
 			}
 			else									// Not Time To Quit, Update Screen
 			{
-				scene->drawScene();
+			    scene->drawScene();
 				SwapBuffers(hDC);					// Swap Buffers (Double Buffering)
 			}
 
 			if (keys[VK_F1])						// Is F1 Being Pressed?
 			{
 				keys[VK_F1]=FALSE;					// If So Make Key FALSE
-				KillGLWindow();						// Kill Our Current Window
+			 	KillGLWindow();						// Kill Our Current Window
 				fullscreen=!fullscreen;				// Toggle Fullscreen / Windowed Mode
 				// Recreate Our OpenGL Window
+
 				if (!CreateGLWindow("Game Engine Lesson 01",fullscreenWidth,fullscreenHeight,256,fullscreen))
 				{
 					return 0;						// Quit If Window Was Not Created
@@ -375,7 +376,7 @@ int WINAPI WinMain(	HINSTANCE	hInstance,			// Instance
 	}
 
 	// Shutdown
-	KillGLWindow();									// Kill The Window
-	delete scene;
+	KillGLWindow();
+	delete scene;								// Kill The Window
 	return (msg.wParam);							// Exit The Program
 }

@@ -3,29 +3,30 @@
 GLModel::GLModel()
 {
     //ctor
-    RotateX = 0.0;  // init X
-    RotateY = 0.0;  // init Y
-    RotateZ = 0.0;  // init Z
 
-    xPos = 0.0;     // init x pos
-    yPos = 0.0;     // init y pos
-    zPos = 0.0;    // init z pos, zoom
+        RotateX= 0.0;  // init rotations
+        RotateY= 0.0;
+        RotateZ= 0.0;
+
+
+        xPos = 0.0;    // init translation
+        yPos = 0.0;
+        zPos = -8.0;
 }
 
 GLModel::~GLModel()
 {
     //dtor
 }
-
 void GLModel::drawModel()
 {
-    glColor3f(1.0,1.0,1.0);
-    glTranslatef(xPos,yPos,zPos);
+    glColor3f(1.0,1.0,1.0);     // set model color
+    glTranslatef(xPos,yPos,zPos); // set model location
 
-    glRotatef(RotateX, 1,0,0);
+    glRotatef(RotateX, 1,0,0);   // rotation controlers
     glRotatef(RotateY, 0,1,0);
     glRotatef(RotateZ, 0,0,1);
 
-    glutSolidTeapot(0.5);       // load and render object
-}
+    glutSolidTeapot(0.2);     // load and render object n
 
+}

@@ -1,12 +1,8 @@
 #ifndef GLTEXTURE_H
 #define GLTEXTURE_H
 
-#include <windows.h>
-#include <GL/gl.h>
-#include <SOIL.h>
-#include <iostream>
+#include<common.h>
 
-using namespace std;
 
 class GLTexture
 {

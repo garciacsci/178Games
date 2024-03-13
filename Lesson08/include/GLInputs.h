@@ -1,11 +1,10 @@
 #ifndef GLINPUTS_H
 #define GLINPUTS_H
 
-#include <GLModel.h>
-#include <GLParallax.h>
-#include <GLPlayer.h>
-#include <common.h>
-
+#include<GLModel.h>
+#include<GLParallax.h>
+#include<GLPlayer.h>
+#include<common.h>
 
 class GLInputs
 {
@@ -13,22 +12,23 @@ class GLInputs
         GLInputs();
         virtual ~GLInputs();
 
-        void keyPress(GLModel*, GLPlayer*);    // when key pressed
-        void keyUp(GLPlayer*);               // when key released
-        void keyBackground(GLParallax *, float);    // parallax model & speed
+        void keyPress(GLModel *, GLPlayer*);  // when key pressed
+        void keyUP(GLPlayer*);               // when key released
+        void keyBackground(GLParallax *, float);//parallax model & speed
 
-        void mouseEventDown(GLModel *, double, double); // mouse button pressed
-        void mouseEventUp();                            // mouse button released
-        void mouseWheel(GLModel *, double);             // mouse wheel rolled
-        void mouseMove(GLModel *, double, double);      // mouse moved
 
-        double prev_MouseX;     // current mouse X location before action
-        double prev_MouseY;     // current mouse Y location before action
+        void mouseEventDown(GLModel*, double, double); // mouse btn pressed
+        void mouseEventUp();                                // mouse btn released
+        void mouseWheel(GLModel*,double);              // mouse wheel rolled
+        void mouseMove(GLModel*, double,double);       // mouse moved
 
-        bool mouse_Translate;   // if mouse moved
-        bool mouse_Rotate;      // if mouse moved for rotation
+        double prev_MouseX;      // current mouse location X before action
+        double prev_MouseY;      // current mouse location Y before action
 
-        WPARAM wParam;          // catching input interrupts
+        bool mouse_Translate;    // if mouse moved
+        bool mouse_Rotate;       // if mouse moved for rotation
+
+        WPARAM wParam;           // catching input interrupts
 
     protected:
 

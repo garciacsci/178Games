@@ -1,9 +1,9 @@
 #ifndef GLENMS_H
 #define GLENMS_H
 
-#include <common.h>
-#include <GLTexture.h>
-#include <GLTimer.h>
+#include<common.h>
+#include<GLTexture.h>
+#include<GLTimer.h>
 
 class GLEnms
 {
@@ -15,7 +15,7 @@ class GLEnms
         void PlaceEnemy(vec3);
         void actions();
 
-        bool isEnemyLive = true;
+        bool isEnemyLive =true;
 
         vec3 pos;
         vec2 eScale;
@@ -26,15 +26,11 @@ class GLEnms
 
         int action;
         float speed;
-
         float xMax,xMin,yMax,yMin;
-
-        GLTexture *background = new GLTexture();
-        GLTimer *myTime = new GLTimer();
-
-
+        GLTimer   *myTime = new GLTimer();
 
     protected:
+
     private:
 };
 

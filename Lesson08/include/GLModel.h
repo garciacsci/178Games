@@ -1,10 +1,8 @@
 #ifndef GLMODEL_H
 #define GLMODEL_H
 
-#include <windows.h>
-#include <iostream>
-#include <gl/gl.h>
-#include <GL/glut.h>
+#include<common.h>
+
 
 class GLModel
 {
@@ -12,16 +10,16 @@ class GLModel
         GLModel();
         virtual ~GLModel();
 
-        GLfloat RotateX;    // for rotation around X
-        GLfloat RotateY;    // for rotation around Y
-        GLfloat RotateZ;    // for rotation around Z
+        GLfloat RotateX;  // for rotation around X
+        GLfloat RotateY;  // for rotation around Y
+        GLfloat RotateZ;  // for rotation around Z
 
-        GLfloat xPos;   // model x position
-        GLfloat yPos;   // model y position, 2D game
-        GLfloat zPos;   // model z position, 3D game, same as zoom
+    //    GLfloat zoom;
+        GLfloat xPos;     // model x possition
+        GLfloat yPos;     // model y possition
+        GLfloat zPos;     // model z possition
 
-        void drawModel();
-
+        void drawModel(); // model drawing
 
     protected:
 
