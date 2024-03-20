@@ -24,7 +24,11 @@ GLEnms::GLEnms()
     yMin=0;
 
     speed =0.01;  // moving speed
-    action=1;     // set actions
+    action= STAND;     // set actions
+    theta = 30*PI/180.0;
+     v =35;
+     t=0;
+
     myTime->startTime = clock();
 }
 
@@ -73,8 +77,17 @@ void GLEnms::actions()
 {
     switch(action)
     {
-    case 0:
-        if(clock() - myTime->startTime>60){
+    case STAND:
+
+    xMax =1.0/framesX;  // default image
+    xMin=0;
+    yMax=1.0/framesY;
+    yMin=0;
+        break;
+
+
+    case WALKLEFT:
+        if(clock() - myTime->startTime>30){
         xMin +=1.0/framesX;
         xMax +=1.0/framesX;
 
@@ -87,8 +100,8 @@ void GLEnms::actions()
         }
         break;
 
-    case 1:
-        if(clock() - myTime->startTime>60){
+    case WALKRIGHT:
+        if(clock() - myTime->startTime>30){
         xMin +=1.0/framesX;
         xMax +=1.0/framesX;
 
@@ -96,8 +109,49 @@ void GLEnms::actions()
         yMax=0.5;
 
         pos.x +=speed;
+        myTime->startTime =clock();
+        }
+        break;
+    case ROLLLEFT:
+        if(clock() - myTime->startTime>30){
+
+        xMin +=1.0/framesX;
+        xMax +=1.0/framesX;
+        yMin= 0.0;
+        yMax=0.5;
+
+        eRotate.z +=(float)((rand()/(float)RAND_MAX))*100;
+
+        pos.x -= (v*t*cos(theta))/1500;
+        pos.y += (v*t*sin(theta)-0.5*GRAVITY*t*t)/300;
+
+        if(pos.y>-1.25)t+=0.3;
+        else{t=0;pos.y=-1.2;}
+
          myTime->startTime =clock();
         }
+        break;
+
+    case ROLLRIGHT:
+        if(clock() - myTime->startTime>30){
+
+        xMin +=1.0/framesX;
+        xMax +=1.0/framesX;
+        yMin= 0.5;
+        yMax=1.5;
+
+        eRotate.z -=(float)((rand()/(float)RAND_MAX))*100;
+
+        pos.x += (v*t*cos(theta))/1500;
+        pos.y += (v*t*sin(theta)-0.5*GRAVITY*t*t)/300;
+
+        if(pos.y>-1.25)t+=0.3;
+        else{t=0;pos.y=-1.2;}
+
+         myTime->startTime =clock();
+        }
+
+
         break;
     }
 

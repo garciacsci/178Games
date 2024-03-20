@@ -17,7 +17,7 @@ GLPlayer::~GLPlayer()
 void GLPlayer::initPlayer(int x, int y, char* fileName)
 {
     plPosition.x =0.0;         // initialize positions
-    plPosition.y =-0.4;
+    plPosition.y =-0.45;
     plPosition.z = -1.0;
 
     plScale.x = 0.5;           // initialize scale
@@ -81,18 +81,35 @@ void GLPlayer::actions()
 
    case WALKLEFT:
 
-       xMax =0;
-       xMin = 1.0/(float)framesX;
-
-       yMax =1.0/(float)framesY;
-       yMin =yMax-1.0/(float)framesY;
-
+    if(clock() - myTime->startTime>30)
+   {
+       if(xMin <1) {
        xMax += 1.0/(float)framesX;
        xMin += 1.0/(float)framesX;
+       }
+       else
+       {
+        xMax = 0;
+        xMin = 1.0/(float)framesX;
+
+         if(yMax <1)
+         {
+             yMax +=1.0/(float)framesY;
+             yMin +=1.0/(float)framesY;
+         }
+         else
+         {
+             yMin =0.0/(float)framesY;
+             yMax =1.0/(float)framesY;
+         }
+
+       }
+        myTime->startTime =clock();
+   }
        break;
 
    case WALKRIGHT:
-    if(clock() - myTime->startTime>60)
+    if(clock() - myTime->startTime>30)
    {
        if(xMax <1) {
        xMin += 1.0/(float)framesX;

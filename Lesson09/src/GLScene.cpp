@@ -7,6 +7,7 @@
 #include<GLPlayer.h>
 #include<GLEnms.h>
 #include<GLTimer.h>
+#include<GLCheckCollision.h>
 
 
 GLTexture *teapotTex = new GLTexture();  // texture object
@@ -19,6 +20,7 @@ GLPlayer *pl          = new GLPlayer();   // Player class
 GLEnms E[20];
 GLTexture *enmsTex = new GLTexture();  // texture object
 GLTimer *T = new GLTimer();
+GLCheckCollision *hit = new GLCheckCollision();   // collision check
 
 
 GLScene::GLScene()
@@ -59,7 +61,9 @@ GLint GLScene::initGL()
     for(int i=0; i<20; i++)
     {
         E[i].pos.x = (float)rand()/(float)RAND_MAX*5-2.5;
-        E[i].pos.y =-1.0;
+        E[i].pos.y =-1.2;
+
+        E[i].pos.x<pl->plPosition.x?E[i].action =E[i].WALKRIGHT:E[i].action =E[i].WALKLEFT;
 
         E[i].eScale.x = E[i].eScale.y = (float)(rand()%12)/30.0;
 
@@ -97,9 +101,18 @@ GLint GLScene::drawScene()    // this function runs on a loop
     for(int i=0; i<20; i++)
     {
 
-       if(E[i].pos.x >2.0){E[i].action =0;E[i].speed =-0.01;}
-       if(E[i].pos.x<-2.0){E[i].action =1;E[i].speed =0.01;}
+       if(E[i].pos.x >3.5){E[i].action =E[i].WALKLEFT;E[i].speed =-0.01; E[i].pos.y =-1.2;E[i].eRotate.z =0;}
+       if(E[i].pos.x<-3.5){E[i].action =E[i].WALKRIGHT;E[i].speed =0.01;E[i].pos.y =-1.2; E[i].eRotate.z =0;}
 
+     if(hit->isRadialCollision(E[i].pos, pl->plPosition,0.5,0.5,0.02))
+     {
+         if(pl->plPosition.x>E[i].pos.x && pl->actionTrigger==pl->WALKLEFT)
+         E[i].action =E[i].ROLLLEFT;
+
+         else if(pl->plPosition.x<E[i].pos.x && pl->actionTrigger==pl->WALKRIGHT)
+         E[i].action =E[i].ROLLRIGHT;
+
+     }
 
        E[i].drawEnemy();
        E[i].actions();

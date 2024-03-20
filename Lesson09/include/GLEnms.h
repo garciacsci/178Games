@@ -17,6 +17,8 @@ class GLEnms
 
         bool isEnemyLive =true;
 
+        enum{STAND,WALKLEFT,WALKRIGHT,ROLLLEFT,ROLLRIGHT,ATTACK};
+
         vec3 pos;
         vec2 eScale;
         vec3 eRotate;
@@ -28,6 +30,11 @@ class GLEnms
         float speed;
         float xMax,xMin,yMax,yMin;
         GLTimer   *myTime = new GLTimer();
+
+        int v;   // velocity
+        float t; // projectile timer
+        float theta;// angle of projectile
+
 
     protected:
 
