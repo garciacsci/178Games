@@ -2,19 +2,21 @@
 #define COMMON_H_INCLUDED
 
 
-#include<windows.h>
-#include<iostream>
-#include<gl/gl.h>
-#include<GL/glut.h>
-#include<time.h>
-#include<math.h>
+#include <windows.h>
+#include <iostream>
+#include <gl/gl.h>
+#include <GL/glut.h>
+#include <time.h>
+#include <math.h>
 
-#include<SOIL.h>
+#include <SOIL.h>
+#include <SNDS/irrKlang.h>
 
 #define GRAVITY 9.81
 #define PI 3.14159
 
 using namespace std;
+using namespace irrklang;
 
 typedef struct{   // shader positions in 3D
     float x;

@@ -8,6 +8,7 @@
 #include<GLEnms.h>
 #include<GLTimer.h>
 #include<GLCheckCollision.h>
+#include<GLSounds.h>
 
 
 GLTexture *teapotTex = new GLTexture();  // texture object
@@ -21,6 +22,7 @@ GLEnms E[20];
 GLTexture *enmsTex = new GLTexture();  // texture object
 GLTimer *T = new GLTimer();
 GLCheckCollision *hit = new GLCheckCollision();   // collision check
+GLSounds *snds = new GLSounds();
 
 
 GLScene::GLScene()
@@ -70,6 +72,10 @@ GLint GLScene::initGL()
     }
 
     T->startTime= clock();
+
+
+    snds->initSound();
+    snds->playMusic("sounds/Hyrule_Field_on_Foot.mp3");
 
     return true;
 }

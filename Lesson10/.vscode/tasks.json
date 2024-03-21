@@ -15,12 +15,13 @@
                 // Include directories
                 "-I", "${workspaceFolder}/../common/include",
                 "-I", "${workspaceFolder}/../common/include/GL",
+                "-I", "${workspaceFolder}/../common/include/SNDS",
                 "-I", "${workspaceFolder}/include",
 
                 // If your bin directory contains libraries, specify it with -L here
                 "-L", "${workspaceFolder}/../common/lib",
 
-                "-lSOIL", "-lglut32", "-lopengl32", "-lglu32", "-lwinmm", "-lgdi32", // Specify other libraries if necessary
+                "-lSOIL", "-lglut32", "-lopengl32", "-lglu32", "-lwinmm", "-lirrKlang","-lgdi32", // Specify other libraries if necessary
                 "-static-libgcc", "-static-libstdc++", // These options statically link libgcc and libstdc++ to avoid dependency on GCC runtime DLLs
                 "-mwindows", // flag for windows GUI applications (not necessary)
 

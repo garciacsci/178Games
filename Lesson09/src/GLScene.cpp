@@ -53,8 +53,8 @@ GLint GLScene::initGL()
     glEnable(GL_TEXTURE_2D);  //enable textures
     teapotTex->loadTexture("images/teapot.jpg");//load texture
     plx->parallaxInit("images/bak.jpg");
-    plx1->parallaxInit("images/plx.png");
     pl->initPlayer(6,4,"images/player.png");
+    plx1->parallaxInit("images/plx.png");
     pl->actionTrigger= pl->STAND;
     enmsTex->loadTexture("images/mon.png");
 
@@ -152,10 +152,10 @@ int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     switch(uMsg)   // check for inputs
     {
     case WM_KEYDOWN:
-         KbMs->wParam = wParam;
+         KbMs->wParam = wParam; 
          KbMs->keyPress(teaPotModel,pl);
-         KbMs->keyBackground(plx,0.005);
-         KbMs->keyBackground(plx1,0.001);
+         KbMs->keyBackground(plx,0.005); 
+         KbMs->keyBackground(plx1,0.001); 
          break;
 
     case WM_KEYUP:

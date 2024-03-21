@@ -133,7 +133,7 @@ void GLInputs::keyBackground(GLParallax* prlx, float speed)
            prlx->xMax -=speed;
         break;
 
-        case VK_RIGHT:         //// move parallax right
+        case VK_RIGHT:         // move parallax right
 
            prlx->xMin +=speed;
            prlx->xMax +=speed;

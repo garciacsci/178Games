@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/../common/include/GL",
+                "${workspaceFolder}/../common/include/SNDS",
                 "${workspaceFolder}/../common/include",
                 "${workspaceFolder}/include"
             ],
